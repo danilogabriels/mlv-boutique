@@ -1,0 +1,21 @@
+{% extends "layout.njk" %}
+
+{% set title = "MLV - Home" %}
+
+{% block content %}
+
+<h1>MLV - Boutique</h1>
+
+<div class="roupas">
+    {% for roupa in roupas %}
+    <div class="roupa">
+        <img src="{{ roupa.image }}" alt="{{ roupa.title }}">
+        <h3>{{ roupa.title }}</h3>
+        <span>Ver Mais</span>
+        <span>Preço: {{ roupa.price }}</span>
+    </div>
+    {% endfor %}
+</div>
+
+
+{% endblock %}
